@@ -2,7 +2,7 @@ import { memo, useCallback } from 'react';
 import '../../styles/Pagination.css';
 
 /**
- * Pagination - Dot-style navigation for month sections
+ * Pagination - Prev/Next navigation for month sections
  */
 const Pagination = memo(({ 
   totalItems, 
@@ -10,7 +10,7 @@ const Pagination = memo(({
   onNavigate,
   sectionIds = []
 }) => {
-  const handleClick = useCallback((index) => {
+  const scrollToSection = useCallback((index) => {
     onNavigate(index);
     
     // Smooth scroll to calendar section
@@ -28,17 +28,39 @@ const Pagination = memo(({
     }, 50);
   }, [onNavigate, sectionIds]);
 
+  const handlePrev = useCallback(() => {
+    if (activeIndex > 0) {
+      scrollToSection(activeIndex - 1);
+    }
+  }, [activeIndex, scrollToSection]);
+
+  const handleNext = useCallback(() => {
+    if (activeIndex < totalItems - 1) {
+      scrollToSection(activeIndex + 1);
+    }
+  }, [activeIndex, totalItems, scrollToSection]);
+
   return (
     <nav className="pagination" aria-label="Month section navigation">
-      {Array.from({ length: totalItems }, (_, index) => (
-        <button
-          key={index}
-          className={`page-btn ${activeIndex === index ? 'active' : ''}`}
-          onClick={() => handleClick(index)}
-          aria-label={`Go to section ${index + 1}`}
-          aria-current={activeIndex === index ? 'true' : undefined}
-        />
-      ))}
+      <button
+        className={`nav-btn prev-btn ${activeIndex === 0 ? 'disabled' : ''}`}
+        onClick={handlePrev}
+        disabled={activeIndex === 0}
+        aria-label="Previous section"
+      >
+        <span className="nav-arrow">&#8249;</span>
+        <span className="nav-text">Prev</span>
+      </button>
+      
+      <button
+        className={`nav-btn next-btn ${activeIndex === totalItems - 1 ? 'disabled' : ''}`}
+        onClick={handleNext}
+        disabled={activeIndex === totalItems - 1}
+        aria-label="Next section"
+      >
+        <span className="nav-text">Next</span>
+        <span className="nav-arrow">&#8250;</span>
+      </button>
     </nav>
   );
 });
