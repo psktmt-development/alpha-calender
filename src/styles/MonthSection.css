@@ -1,0 +1,132 @@
+/* Month Section Styles */
+.month-section {
+  min-height: 100vh;
+  padding: 90px 5% 70px;
+  position: relative;
+  display: none;
+  opacity: 0;
+  transform: translateY(25px);
+  transition: var(--transition);
+}
+
+.month-section.active {
+  display: block;
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.month-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.month-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 2.5px;
+  background: var(--alpha-gold);
+  border-radius: 2px;
+}
+
+.month-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.6rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(to right, var(--alpha-platinum), var(--alpha-gold-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 4px;
+  position: relative;
+  display: inline-block;
+  line-height: 0.95;
+}
+
+.month-title::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--alpha-gold);
+  opacity: 0.65;
+}
+
+.month-subtitle {
+  font-size: 1.65rem;
+  color: var(--alpha-gold-light);
+  margin-top: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+/* Events Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .month-title {
+    font-size: 4.2rem;
+  }
+  
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .month-section {
+    padding: 85px 4% 65px;
+  }
+  
+  .month-title {
+    font-size: 3.7rem;
+    letter-spacing: 3px;
+  }
+  
+  .month-subtitle {
+    font-size: 1.45rem;
+    letter-spacing: 2.2px;
+  }
+  
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .month-section {
+    padding: 80px 3% 60px;
+  }
+  
+  .month-title {
+    font-size: 3.25rem;
+    letter-spacing: 2.5px;
+  }
+  
+  .month-subtitle {
+    font-size: 1.38rem;
+    letter-spacing: 2px;
+  }
+  
+  .month-header::after {
+    width: 90px;
+  }
+}
