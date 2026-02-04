@@ -13,7 +13,7 @@ export const monthPeriods = [
         description: 'A visionary entrepreneur & respected industry leader, known for building iconic enterprises across sectors. His journey reflects resilience, innovation, & strategic excellence, making his presence truly inspiring.',
         type: 'Strategy Circle',
         location: 'Falaknuma Palace',
-        image: 'images/09 JAN.png',
+        image: '/images/09 JAN.png',
         isVip: false
       },
       {
@@ -24,7 +24,7 @@ export const monthPeriods = [
         description: "Celebrate love this Valentine's Day in an atmosphere filled with joy and togetherness. Join us along with your partner to grace the event and make the evening truly memorable with curated experiences and intimate conversations.",
         type: 'Members Gala',
         location: 'Venue will be updated soon',
-        image: 'images/14 FEB.png',
+        image: '/images/14 FEB.png',
         isVip: false
       },
       {
@@ -35,7 +35,7 @@ export const monthPeriods = [
         description: 'Anand Nandhakumar is an Assistant Professor at ISB, known for his insights in strategy and innovation. His speaker session promises thought provoking perspectives and valuable learnings for leaders & entrepreneurs.',
         type: 'Academic Insight',
         location: 'ISB Campus',
-        image: 'images/24 FEB.png',
+        image: '/images/24 FEB.png',
         isVip: false
       }
     ]
@@ -53,7 +53,7 @@ export const monthPeriods = [
         description: 'Private sessions featuring prominent individuals whose decisions have shaped power, wealth, reputation, and legacy — offering insights rarely shared in public. An exclusive dialogue on policy influence and strategic decision-making.',
         type: 'Influence Series',
         location: 'Venue will be updated soon',
-        image: 'images/10 Mar.png',
+        image: '/images/10 Mar.png',
         isVip: false
       },
       {
@@ -64,7 +64,7 @@ export const monthPeriods = [
         description: 'Curated experiences designed to restore clarity, energy, and emotional balance — because the quality of decisions is inseparable from the state of mind. Choose from sound therapy, pottery, karaoke, or star gazing under expert guidance.',
         type: 'Wellness Retreat',
         location: 'Venue will be updated soon',
-        image: 'images/24 MAR.png',
+        image: '/images/24 MAR.png',
         isVip: false
       },
       {
@@ -75,7 +75,7 @@ export const monthPeriods = [
         description: 'An invitation-only leadership retreat where Alpha Circle members step away from noise to engage in rare, unfiltered conversations that shape perspective, strengthen bonds, and influence the next decade of decisions. Limited to 15 visionaries.',
         type: 'Leadership Summit',
         location: 'Venue will be updated soon',
-        image: 'images/14 April.png',
+        image: '/images/14 April.png',
         isVip: true
       }
     ]
@@ -93,7 +93,7 @@ export const monthPeriods = [
         description: 'Private sessions featuring prominent individuals whose decisions have shaped power, wealth, reputation, and legacy — offering insights rarely shared in public.',
         type: 'Influence Series',
         location: 'Venue will be updated soon',
-        image: 'images/12 MAY.png',
+        image: '/images/12 MAY.png',
         isVip: false
       },
       {
@@ -104,7 +104,7 @@ export const monthPeriods = [
         description: 'A closed-door capital forum where carefully curated opportunities are presented exclusively to Alpha Circle members — designed for serious capital, informed judgment, and long-term value creation.',
         type: 'Startup Pitches',
         location: 'Venue will be updated soon',
-        image: 'images/26 MAY.png',
+        image: '/images/26 MAY.png',
         isVip: false
       },
       {
@@ -115,7 +115,7 @@ export const monthPeriods = [
         description: 'A closed-door fireside conversation where the next generation engages with Alpha Circle members on leadership transition, responsibility, and the realities of inheriting — and growing — legacy.',
         type: 'Fireside Chat',
         location: 'Venue will be updated soon',
-        image: 'images/09 JUNE.png',
+        image: '/images/09 JUNE.png',
         isVip: false
       },
       {
@@ -126,7 +126,7 @@ export const monthPeriods = [
         description: 'Meaningful partnership in providing resources, support & expertise to help & improve the school infrastructure, teaching & student outcomes.',
         type: 'Social Impact',
         location: 'Venue will be updated soon',
-        image: 'images/23 JUNE.png',
+        image: '/images/23 JUNE.png',
         isVip: false
       }
     ]
@@ -144,7 +144,7 @@ export const monthPeriods = [
         description: 'Private sessions featuring prominent individuals whose decisions have shaped power, wealth, reputation, and legacy — offering insights rarely shared in public.',
         type: 'Influence Series',
         location: 'Venue will be updated soon',
-        image: 'images/14 JULY.png',
+        image: '/images/14 JULY.png',
         isVip: false
       },
       {
@@ -155,7 +155,7 @@ export const monthPeriods = [
         description: 'Confidential, member-only conversations where real stories, hard lessons, and pivotal decisions are shared — building trust before transactions.',
         type: 'Inner Circle',
         location: 'Venue will be updated soon',
-        image: 'images/28 JULY.png',
+        image: '/images/28 JULY.png',
         isVip: false
       },
       {
@@ -166,7 +166,7 @@ export const monthPeriods = [
         description: 'Exclusive, behind-the-scenes industrial visits for Alpha Circle members — offering direct exposure to real-world operations, strategic decision-making, and scale-driven execution across high-impact industries.',
         type: 'Industrial Visit',
         location: 'Venue will be updated soon',
-        image: 'images/11 AUG.png',
+        image: '/images/11 AUG.png',
         isVip: false
       },
       {
@@ -177,7 +177,7 @@ export const monthPeriods = [
         description: 'Confidential, member-only conversations where real stories, hard lessons, and pivotal decisions are shared — building trust before transactions.',
         type: 'Inner Circle',
         location: 'Venue will be updated soon',
-        image: 'images/25 AUG.png',
+        image: '/images/25 AUG.png',
         isVip: false
       }
     ]
@@ -195,7 +195,7 @@ export const monthPeriods = [
         description: 'Private sessions featuring prominent individuals whose decisions have shaped power, wealth, reputation, and legacy — offering insights rarely shared in public.',
         type: 'Influence Series',
         location: 'Venue will be updated soon',
-        image: 'images/08 SEPT.png',
+        image: '/images/08 SEPT.png',
         isVip: false
       },
       {
@@ -206,7 +206,7 @@ export const monthPeriods = [
         description: 'Confidential, member-only conversations where real stories, hard lessons, and pivotal decisions are shared — building trust before transactions.',
         type: 'Inner Circle',
         location: 'Venue will be updated soon',
-        image: 'images/22 SEPT.png',
+        image: '/images/22 SEPT.png',
         isVip: false
       },
       {
@@ -217,7 +217,7 @@ export const monthPeriods = [
         description: 'A refreshing outdoor activity hosted anywhere within Hyderabad city limits.',
         type: 'Outdoor Activity',
         location: 'Hyderabad',
-        image: 'images/13 OCT.png',
+        image: '/images/13 OCT.png',
         isVip: false
       },
       {
@@ -228,7 +228,7 @@ export const monthPeriods = [
         description: 'A closed-door capital forum where carefully curated opportunities are presented exclusively to Alpha Circle members — designed for serious capital, informed judgment, and long-term value creation.',
         type: 'Startup Pitches',
         location: 'Venue will be updated soon',
-        image: 'images/27 OCT.png',
+        image: '/images/27 OCT.png',
         isVip: false
       }
     ]
@@ -246,7 +246,7 @@ export const monthPeriods = [
         description: 'An invitation-only Diwali gathering for Alpha Circle members — blending celebration with high-trust networking, meaningful conversations, and the strengthening of relationships that go beyond business.',
         type: 'Diwali Conclave',
         location: 'Venue will be updated soon',
-        image: 'images/10 NOV.png',
+        image: '/images/10 NOV.png',
         isVip: true
       },
       {
@@ -257,7 +257,7 @@ export const monthPeriods = [
         description: 'Structured, long-term initiatives where members and their families collectively build meaningful impact — ensuring legacy extends beyond individual success.',
         type: 'Legacy Initiative',
         location: 'Venue will be updated soon',
-        image: 'images/29 NOV.png',
+        image: '/images/29 NOV.png',
         isVip: false
       },
       {
@@ -268,7 +268,7 @@ export const monthPeriods = [
         description: 'Private sessions featuring prominent individuals whose decisions have shaped power, wealth, reputation, and legacy — offering insights rarely shared in public.',
         type: 'Influence Series',
         location: 'Venue will be updated soon',
-        image: 'images/08 DEC.png',
+        image: '/images/08 DEC.png',
         isVip: false
       },
       {
@@ -279,7 +279,7 @@ export const monthPeriods = [
         description: 'A closed-door fireside conversation where the next generation engages with Alpha Circle members on leadership transition, responsibility, and the realities of inheriting — and growing — legacy.',
         type: 'Fireside Chat',
         location: 'Venue will be updated soon',
-        image: 'images/22 DEC.png',
+        image: '/images/22 DEC.png',
         isVip: false
       }
     ]

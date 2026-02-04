@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { 
   Header, 
   Footer, 
@@ -7,7 +7,16 @@ import {
   Constellation 
 } from './components';
 import { monthPeriods, navigationItems, contactInfo } from './data/events';
+import { preloadImages } from './hooks';
 import './styles/index.css';
+
+// Extract all image URLs for preloading
+const allImageUrls = monthPeriods.flatMap(period => 
+  period.events.map(event => event.image)
+);
+
+// Preload images immediately on module load (before React mounts)
+preloadImages(allImageUrls);
 
 /**
  * App - Main application component
@@ -15,6 +24,14 @@ import './styles/index.css';
  */
 function App() {
   const [activeSectionIndex, setActiveSectionIndex] = useState(0);
+
+  // Additional eager preload on mount for maximum cache hits
+  useEffect(() => {
+    allImageUrls.forEach(src => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   // Derive active section ID from index
   const activeSectionId = useMemo(() => {

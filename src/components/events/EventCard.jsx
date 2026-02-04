@@ -4,9 +4,11 @@ import '../../styles/EventCard.css';
 /**
  * EventCard - Individual event card component
  * Displays event details with image, date, title, description, type, and location
+ * Uses optimized image loading with eager fetch priority
  */
 const EventCard = memo(({ event }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const {
     date,
@@ -31,6 +33,10 @@ const EventCard = memo(({ event }) => {
     e.preventDefault();
   }, []);
 
+  const handleImageLoad = useCallback(() => {
+    setImageLoaded(true);
+  }, []);
+
   return (
     <article 
       className={`event-card ${isVip ? 'vip' : ''}`}
@@ -38,13 +44,17 @@ const EventCard = memo(({ event }) => {
       onMouseLeave={handleMouseLeave}
       style={{ zIndex: isHovered ? 10 : 1 }}
     >
-      <div 
-        className="event-image" 
-        style={{ backgroundImage: `url('${image}')` }}
-        onDragStart={handleDragStart}
-        role="img"
-        aria-label={`Event image for ${title}`}
-      />
+      <div className={`event-image ${imageLoaded ? 'loaded' : ''}`}>
+        <img
+          src={image}
+          alt={`Event: ${title}`}
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          onLoad={handleImageLoad}
+          onDragStart={handleDragStart}
+        />
+      </div>
       
       <div className="event-date-container">
         <div className="event-date">{date}</div>
